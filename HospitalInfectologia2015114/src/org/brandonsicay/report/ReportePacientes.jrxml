@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePacientes" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cb53d58e-8e39-4242-9cc8-4f22a3bd38c2">
+	<property name="ireport.zoom" value="1.3310000000000117"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select
+	Pacientes.idPaciente,
+	Pacientes.DPI,
+    Pacientes.apellido,
+    Pacientes.nombre,
+    Pacientes.fechaNacimiento,
+    Pacientes.edad,
+    Pacientes.direccion,
+    Pacientes.ocupacion,
+    Pacientes.sexo,
+    ContactoUrgencia.numeroContacto
+	from Pacientes RIGHT JOIN ContactoUrgencia ON Pacientes.idPaciente = ContactoUrgencia.codigoPaciente
+    Order By Pacientes.idPaciente;]]>
+	</queryString>
+	<field name="idPaciente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DPI" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellido" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaNacimiento" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="edad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ocupacion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="numeroContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="127" splitType="Stretch">
+			<line>
+				<reportElement x="153" y="115" width="420" height="1" forecolor="#990000" backcolor="#00CC99" uuid="da241514-09f1-4c52-a155-3f54eac522d3"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-21" y="115" width="174" height="1" forecolor="#000000" backcolor="#00CC99" uuid="e0d9119d-5f1f-4fc7-a13a-ad46a9c8031a"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="182" y="67" width="138" height="1" forecolor="#000000" backcolor="#00CC99" uuid="1bd20424-635e-48fc-a4cd-c5a77e9a7f89"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="182" y="101" width="269" height="1" forecolor="#000000" backcolor="#00CC99" uuid="e0f49ba9-34ff-43db-a822-fecf2c06eb34"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="205" y="63" width="237" height="38" uuid="e7171fe1-e3a9-4809-afdb-8d5849f777e2"/>
+				<textElement>
+					<font fontName="Forte" size="20" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[A Passion for Healting]]></text>
+			</staticText>
+			<line>
+				<reportElement x="346" y="66" width="104" height="1" forecolor="#000000" backcolor="#00CC99" uuid="991096bf-1f5b-43d4-b909-d3dd439f0f4c"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="238" y="-19" width="272" height="120" uuid="dfabc529-1f51-4c95-a4b6-fc2399b7bda9"/>
+				<imageExpression><![CDATA["C:\\Users\\brand\\Documents\\NetBeansProjects\\HospitalInfectologia2015114\\src\\org\\brandonsicay\\images\\Logo2.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="76" splitType="Stretch">
+			<line>
+				<reportElement x="135" y="59" width="339" height="1" forecolor="#000000" backcolor="#00CC99" uuid="c34c83ed-8609-47be-885c-4cd918dde47b"/>
+				<graphicElement>
+					<pen lineWidth="3.0" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="211" y="11" width="263" height="33" uuid="df666059-1588-4b86-92dc-1293ab2c0e4b"/>
+				<imageExpression><![CDATA["C:\\Users\\brand\\Documents\\NetBeansProjects\\HospitalInfectologia2015114\\src\\org\\brandonsicay\\images\\generatedtext (1).png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="56" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="555" height="45" forecolor="#CCCCCC" backcolor="#660033" uuid="e0c33350-5ed6-4c66-8784-6cb44477d161"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="13" y="11" width="100" height="20" forecolor="#FFFFFF" uuid="6a649a37-4600-49e2-a24c-df4d3a3212d8"/>
+				<textElement>
+					<font fontName="Constantia" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="125" y="11" width="80" height="20" forecolor="#FFFFFF" uuid="93f12e45-ebb8-450f-ae66-a0471b504c35"/>
+				<textElement>
+					<font fontName="Constantia" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DPI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="11" width="100" height="20" uuid="a91b999e-3161-41aa-a5a4-2f44c2448408"/>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="11" width="100" height="20" uuid="891076d3-6504-452b-b073-e0479aceb9b8"/>
+				<text><![CDATA[apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="483" y="11" width="100" height="20" uuid="7d7a184f-a41f-419e-bd7f-ee20b8716f86"/>
+				<text><![CDATA[ocupacion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="30" width="555" height="1" forecolor="#006666" uuid="61ba8735-0f26-4e57-98e9-f4fb9ae1a374"/>
+			</line>
+			<line>
+				<reportElement x="95" y="7" width="1" height="9" uuid="bb6c5281-db91-4543-b24e-4e1fe4abc0fe"/>
+			</line>
+			<line>
+				<reportElement x="200" y="7" width="1" height="9" uuid="83ba30c9-494a-4ea5-9c37-7c584e21be3f"/>
+			</line>
+			<line>
+				<reportElement x="301" y="6" width="1" height="9" uuid="ae24c0d6-0508-441a-9be7-3b5bb8354fed"/>
+			</line>
+			<line>
+				<reportElement x="382" y="6" width="1" height="9" uuid="2c5dfd51-1c34-4865-8329-bbe31c1d9776"/>
+			</line>
+			<line>
+				<reportElement x="450" y="8" width="1" height="9" uuid="353d88ce-144f-447d-9197-075005ea85ee"/>
+			</line>
+			<textField>
+				<reportElement x="13" y="8" width="100" height="20" uuid="63d92f73-0886-427b-b55b-6fa8debebe18"/>
+				<textFieldExpression><![CDATA[$F{idPaciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="4" width="100" height="20" uuid="730ce73e-bdc6-4eac-b667-9968172cb338"/>
+				<textFieldExpression><![CDATA[$F{DPI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="8" width="100" height="20" uuid="a60808c9-ba1d-4059-887c-15a56032d3f5"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="10" width="100" height="20" uuid="3a4c846f-a8e8-4b02-aab5-0729e2fa7f46"/>
+				<textFieldExpression><![CDATA[$F{apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="483" y="4" width="100" height="20" uuid="b55d2da4-181a-4956-aa90-eb36700e91f1"/>
+				<textFieldExpression><![CDATA[$F{ocupacion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="58" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="53" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="32" width="555" height="21" forecolor="#FFFFFF" backcolor="#660000" uuid="b2bfbef6-c340-4fb6-a4f8-9ef43e18b00e"/>
+			</rectangle>
+		</band>
+	</pageFooter>
+</jasperReport>

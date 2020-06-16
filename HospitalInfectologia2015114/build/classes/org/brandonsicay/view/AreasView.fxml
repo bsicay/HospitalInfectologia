@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="739.0" styleClass="Anchor-Pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.brandonsicay.controller.AreasController">
+   <children>
+      <Label layoutX="319.0" layoutY="28.0" prefHeight="48.0" prefWidth="101.0" styleClass="label-header" text="Areas">
+         <font>
+            <Font name="MS Reference Sans Serif" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="104.0" prefHeight="30.0" prefWidth="77.0" styleClass="label-bright" text="Nombre ">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombre" editable="false" layoutX="148.0" layoutY="103.0" onKeyTyped="#soloLetras" prefHeight="31.0" prefWidth="550.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <TableView fx:id="tblAreas" layoutX="51.0" layoutY="185.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="200.0" prefWidth="657.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="177.0" text="Codigo" />
+            <TableColumn fx:id="colArea" prefWidth="498.0" text="Nombre" />
+         </columns>
+         <effect>
+            <InnerShadow color="#07327c">
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+      </TableView>
+      <Button fx:id="btnReporte" layoutX="346.0" layoutY="417.0" mnemonicParsing="false" onAction="#reporte" prefHeight="43.0" prefWidth="77.0" text="Reporte" />
+      <Button fx:id="btnEditar" layoutX="254.0" layoutY="417.0" mnemonicParsing="false" onAction="#editar" prefHeight="43.0" prefWidth="77.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="162.0" layoutY="417.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="43.0" prefWidth="77.0" text="Eliminar" />
+      <Button fx:id="btnNuevo" layoutX="65.0" layoutY="417.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="43.0" prefWidth="77.0" text="Nuevo" />
+      <ImageView fitHeight="67.0" fitWidth="65.0" layoutX="19.0" layoutY="20.0" onMouseClicked="#Modulos" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow height="7.66" radius="9.629999999999999" width="32.86" />
+         </effect>
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+   </children>
+   <stylesheets>
+      <URL value="@../resource/fondo.css" />
+      <URL value="@../resource/FondoPrincipal.css" />
+   </stylesheets>
+</AnchorPane>

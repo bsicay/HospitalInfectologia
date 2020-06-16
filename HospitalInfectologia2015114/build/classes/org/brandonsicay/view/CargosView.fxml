@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="761.0" styleClass="Anchor-Pane" stylesheets="@../resource/fondo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.brandonsicay.controller.CargosController">
+   <children>
+      <Label layoutX="326.0" layoutY="34.0" prefHeight="48.0" prefWidth="109.0" styleClass="label-header" text="Cargos">
+         <font>
+            <Font name="MS Reference Sans Serif" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCargos" layoutX="52.0" layoutY="179.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="200.0" prefWidth="657.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="177.0" text="Codigo" />
+            <TableColumn fx:id="colCargo" prefWidth="498.0" text="Nombre" />
+         </columns>
+         <effect>
+            <InnerShadow color="#07327c">
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+      </TableView>
+      <TextField fx:id="txtNombre" editable="false" layoutX="149.0" layoutY="97.0" onKeyTyped="#soloLetras" prefHeight="31.0" prefWidth="550.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <Label layoutX="60.0" layoutY="98.0" prefHeight="30.0" prefWidth="77.0" styleClass="label-bright" text="Nombre ">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="75.0" layoutY="427.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="43.0" prefWidth="77.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="172.0" layoutY="427.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="43.0" prefWidth="77.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="264.0" layoutY="427.0" mnemonicParsing="false" onAction="#editar" prefHeight="43.0" prefWidth="77.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="356.0" layoutY="427.0" mnemonicParsing="false" onAction="#reporte" prefHeight="43.0" prefWidth="77.0" text="Reporte" />
+      <ImageView fitHeight="67.0" fitWidth="65.0" layoutX="25.0" layoutY="14.0" onMouseClicked="#Modulos" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow height="7.66" radius="9.629999999999999" width="32.86" />
+         </effect>
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

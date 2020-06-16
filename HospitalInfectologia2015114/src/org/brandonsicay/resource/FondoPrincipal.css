@@ -1,0 +1,64 @@
+.Anchor-Pane{
+    -fx-background-size: 800 900;
+    -fx-background-color: linear-gradient(#5E1BE1,#2CAADA);
+    -fx-border-radius: 18 18 18 18;
+    -fx-border-width:5;
+}
+
+@font-face{
+    src: url("SourceSansPro-Semibold.otf")
+}
+
+@font-face{
+    src: url("LuckiestGuy.ttf")
+}
+
+.button:hover {
+    -fx-background-color: #FFFFFF;
+}
+
+.label {
+    -fx-font-size: 15pt;
+    -fx-font-family: "SourceSansPro-Semibold";
+    -fx-text-fill: black;
+    -fx-opacity: 0.6;
+}
+
+.label-bright {
+    -fx-font-size: 12pt;
+    -fx-font-family: "SourceSansPro-Semibold";
+    -fx-text-fill: black;
+    -fx-opacity: 1;
+}
+
+.label-header {
+    -fx-font-size: 25pt;
+    -fx-font-family: "SourceSansPro-Semibold";
+    -fx-text-fill: black;
+    -fx-opacity: 1;
+}
+
+
+.table-view{
+   -fx-control-inner-background: #C3CED3;
+    
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #1d1d1d;
+    -fx-control-inner-background: #1d1d1d;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 12pt;
+    -fx-font-family: "SourceSansPro-Semibold";
+    -fx-text-fill: black;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.menu-bar {
+    -fx-background-color: derive(#FFFFFF,20%);
+    -fx-font-family: "SourceSansPro-Semibold";
+    -fx-font-size: 10pt;
+}

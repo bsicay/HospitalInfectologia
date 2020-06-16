@@ -1,0 +1,23 @@
+#anchor{
+    -fx-background-size: 800 900;
+    -fx-background-color: linear-gradient(#51BCE4,#0F5EC7);
+    -fx-border-radius: 18 18 18 18;
+    -fx-border-width:5;
+
+}
+#nombre{
+    
+    -fx-background-size: 800 900;
+    -fx-background-color: #d7d7d8;
+    -fx-background-radius: 8 8 8 8;
+    -fx-border-radius: 18 18 18 18;
+    -fx-border-width:5;   
+
+}
+    #n1{
+    -fx-font-size: 15pt;
+    -fx-font-family: "SourceSansPro-Semibold";
+    
+    }
+
+   

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="820.0" styleClass="Anchor-Pane" stylesheets="@../resource/fondo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.brandonsicay.controller.HorariosController">
+   <children>
+      <Label layoutX="370.0" layoutY="23.0" prefHeight="48.0" prefWidth="133.0" styleClass="label-header" text="Horarios">
+         <font>
+            <Font name="MS Reference Sans Serif" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblHorarios" layoutX="61.0" layoutY="273.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="200.0" prefWidth="727.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="70.0" text="Codigo" />
+            <TableColumn fx:id="coIInicio" prefWidth="82.0" text="Inicio" />
+            <TableColumn fx:id="colSalida" prefWidth="90.0" text="Salida" />
+            <TableColumn fx:id="colLunes" prefWidth="75.0" text="Lunes" />
+            <TableColumn fx:id="colMartes" prefWidth="88.0" text="Martes" />
+            <TableColumn fx:id="colMiercoles" prefWidth="103.0" text="Miercoles" />
+            <TableColumn fx:id="colJueves" prefWidth="115.0" text="Jueves" />
+            <TableColumn fx:id="colViernes" prefWidth="99.0" text="Viernes" />
+         </columns>
+         <effect>
+            <InnerShadow color="#07327c">
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+      </TableView>
+      <TextField fx:id="txtInicio" editable="false" layoutX="126.0" layoutY="97.0" onKeyTyped="#horaEntrada" prefHeight="31.0" prefWidth="271.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <Label layoutX="72.0" layoutY="98.0" prefHeight="30.0" prefWidth="77.0" styleClass="label-bright" text="Inicio">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="78.0" layoutY="495.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="43.0" prefWidth="77.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="175.0" layoutY="495.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="43.0" prefWidth="77.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="267.0" layoutY="495.0" mnemonicParsing="false" onAction="#editar" prefHeight="43.0" prefWidth="77.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="359.0" layoutY="495.0" mnemonicParsing="false" onAction="#reporte" prefHeight="43.0" prefWidth="77.0" text="Reporte" />
+      <ImageView fitHeight="67.0" fitWidth="65.0" layoutX="14.0" layoutY="15.0" onMouseClicked="#ventanaMedicos" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow height="7.66" radius="9.629999999999999" width="32.86" />
+         </effect>
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="411.0" layoutY="98.0" prefHeight="30.0" prefWidth="77.0" styleClass="label-bright" text="Salida">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSalida" editable="false" layoutX="473.0" layoutY="97.0" onKeyTyped="#horaSalida" prefHeight="31.0" prefWidth="314.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <CheckBox fx:id="cbLunes" layoutX="203.0" layoutY="161.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="94.0" styleClass="label-bright" text="Lunes" />
+      <CheckBox fx:id="cbMartes" layoutX="356.0" layoutY="161.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="94.0" styleClass="label-bright" text="Martes" />
+      <CheckBox fx:id="cbJueves" layoutX="276.0" layoutY="213.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="94.0" styleClass="label-bright" text="Jueves" />
+      <CheckBox fx:id="cbMiercoles" layoutX="530.0" layoutY="161.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="139.0" styleClass="label-bright" text="Miercoles" />
+      <CheckBox fx:id="cbViernes" layoutX="424.0" layoutY="213.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="94.0" styleClass="label-bright" text="Viernes" />
+   </children>
+</AnchorPane>

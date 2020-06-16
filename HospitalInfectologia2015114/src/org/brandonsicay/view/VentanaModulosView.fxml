@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="820.0" styleClass="Anchor-Pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.brandonsicay.controller.ModulosController">
+   <children>
+      <ImageView fx:id="pacientes" fitHeight="142.0" fitWidth="128.0" layoutX="40.0" layoutY="45.0" onMouseClicked="#Pacientes" onMouseEntered="#pacientesZoom" onMouseExited="#pacientesNormal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/pacientes.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="medicos" fitHeight="142.0" fitWidth="128.0" layoutX="40.0" layoutY="201.0" onMouseClicked="#ventanaMedicos" onMouseEntered="#medicosZoom" onMouseExited="#medicosNormal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/medicos.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cargos" fitHeight="142.0" fitWidth="128.0" layoutX="315.0" layoutY="205.0" onMouseClicked="#Cargos" onMouseEntered="#cargosZoom" onMouseExited="#cargosNormal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/cargos.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="areas" fitHeight="142.0" fitWidth="128.0" layoutX="315.0" layoutY="44.0" onMouseClicked="#Areas" onMouseEntered="#areasZoom" onMouseExited="#areasNormal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/areas.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="especialidades" fitHeight="142.0" fitWidth="128.0" layoutX="41.0" layoutY="367.0" onMouseClicked="#Especialidades" onMouseEntered="#especialidadesZoom" onMouseExited="#especialidadesNormal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/especialidades.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="179.0" layoutY="92.0" text="Pacientes" />
+      <Label layoutX="183.0" layoutY="233.0" text="Medicos" />
+      <Label layoutX="173.0" layoutY="418.0" text="Especialidades" />
+      <Label layoutX="458.0" layoutY="87.0" text="Áreas" />
+      <Label layoutX="458.0" layoutY="267.0" text="Cargos" />
+      <ImageView fitHeight="94.0" fitWidth="83.0" layoutX="641.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow height="7.66" radius="9.629999999999999" width="32.86" />
+         </effect>
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="responsableTurno" fitHeight="142.0" fitWidth="128.0" layoutX="619.0" layoutY="315.0" onMouseClicked="#ResponsableTurno" onMouseEntered="#responsableTurnoZoom" onMouseExited="#responsableTurnoNormal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/responsableTurno.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="598.0" layoutY="462.0" text="Responsable Turno" />
+      <ImageView fx:id="medicoEspecialidad" fitHeight="142.0" fitWidth="128.0" layoutX="618.0" layoutY="117.0" onMouseClicked="#medicoEspecialidad" onMouseEntered="#medicoEspecialidadZoom" onMouseExited="#medicoEspecialidadNormal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/medicoEspecialidad.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="587.0" layoutY="267.0" text="Medico Esepecialidad" />
+      <ImageView fx:id="turno" fitHeight="142.0" fitWidth="128.0" layoutX="315.0" layoutY="367.0" onMouseClicked="#turno" onMouseEntered="#turnoZoom" onMouseExited="#turnoNormal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/TurnoNormal.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="458.0" layoutY="418.0" text="Turno" />
+   </children>
+   <stylesheets>
+      <URL value="@../resource/fondo.css" />
+      <URL value="@../resource/FondoPrincipal.css" />
+   </stylesheets>
+</AnchorPane>

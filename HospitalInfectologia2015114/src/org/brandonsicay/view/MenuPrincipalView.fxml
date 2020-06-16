@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="671.0" prefWidth="850.0" styleClass="Anchor-Pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.brandonsicay.controller.MenuPrincipalController">
+   <children>
+      <ImageView fx:id="reportes" fitHeight="149.0" fitWidth="141.0" layoutX="366.0" layoutY="243.0" onMouseClicked="#reportes" onMouseEntered="#zoomReporte" onMouseExited="#normalReporte" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+         <image>
+            <Image url="@../images/png/reportes.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="346.0" fitWidth="359.0" layoutX="218.0" layoutY="-80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Logo2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="222.0" layoutX="232.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/helth.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="174.0" layoutY="427.0" text="MÓDULOS" />
+      <Label layoutX="391.0" layoutY="427.0" text="REPORTES" />
+      <Label layoutX="599.0" layoutY="427.0" text="AYUDA" />
+      <ImageView fitHeight="115.0" fitWidth="96.0" layoutX="582.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+         <image>
+            <Image url="@../images/png/blanco2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cuadro" fitHeight="149.0" fitWidth="141.0" layoutX="149.0" layoutY="250.0" onMouseClicked="#Modulos" onMouseEntered="#zoom" onMouseExited="#normal" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+         <image>
+            <Image url="@../images/png/modulos.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="ayuda" fitHeight="149.0" fitWidth="141.0" layoutX="560.0" layoutY="243.0" onMouseClicked="#ayuda" onMouseEntered="#ayudaZoom" onMouseExited="#ayudaNormal" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+         <image>
+            <Image url="@../images/png/ayuda.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="3.0" fitWidth="154.0" layoutX="143.0" layoutY="409.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/Línea%201.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="3.0" fitWidth="154.0" layoutX="554.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/Línea%201.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="3.0" fitWidth="154.0" layoutX="360.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/Línea%201.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sesion" fitHeight="131.0" fitWidth="129.0" layoutX="376.0" layoutY="478.0" onMouseClicked="#cerrarSesion" onMouseEntered="#sesionZoom" onMouseExited="#sesionNormal" pickOnBounds="true" preserveRatio="true" styleClass="image-view">
+         <image>
+            <Image url="@../images/png/cerrarSesionNormal.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="393.0" layoutY="620.0" text="Cerrar Sesion" />
+   </children>
+   <stylesheets>
+      <URL value="@../resource/fondo.css" />
+      <URL value="@../resource/FondoPrincipal.css" />
+   </stylesheets>
+</AnchorPane>

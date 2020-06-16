@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="725.0" styleClass="Anchor-Pane" stylesheets="@../resource/fondo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.brandonsicay.controller.TelefonoMedicoController">
+   <children>
+      <Label layoutX="250.0" layoutY="14.0" prefHeight="48.0" prefWidth="300.0" styleClass="label-header" text="Telefono Medicos ">
+         <font>
+            <Font size="49.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="68.0" prefHeight="30.0" prefWidth="133.0" styleClass="label-bright" text="Telefono Personal">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTelefonoPersonal" editable="false" layoutX="184.0" layoutY="68.0" onKeyTyped="#telefonoPersonal" prefHeight="31.0" prefWidth="494.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <Label layoutX="51.0" layoutY="110.0" prefHeight="30.0" prefWidth="133.0" styleClass="label-bright" text="Telefono Trabajo">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="157.0" prefHeight="30.0" prefWidth="133.0" styleClass="label-bright" text="Codigo Medico">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTelefonoTrabajo" editable="false" layoutX="184.0" layoutY="110.0" onKeyTyped="#telefonoTrabajo" prefHeight="31.0" prefWidth="494.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <ComboBox fx:id="cmbCodigoMedico" layoutX="184.0" layoutY="157.0" prefHeight="31.0" prefWidth="494.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251" />
+               </input>
+            </InnerShadow>
+         </effect>
+      </ComboBox>
+      <TableView fx:id="tblTelefonoMedicos" layoutX="52.0" layoutY="215.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="200.0" prefWidth="633.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="108.0" text="Codigo" />
+            <TableColumn fx:id="colTelefonoPersonal" prefWidth="220.0" text="Telefono Personal" />
+            <TableColumn fx:id="colTelefonoTrabajo" minWidth="0.0" prefWidth="190.0" text="Telefono Trabajo" />
+            <TableColumn fx:id="colCodigoMedico" minWidth="0.0" prefWidth="114.0" text="Codigo Medico" />
+         </columns>
+         <effect>
+            <InnerShadow color="#07327c">
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+      </TableView>
+      <Button fx:id="btnReporte" layoutX="361.0" layoutY="433.0" mnemonicParsing="false" onAction="#reporte" prefHeight="43.0" prefWidth="77.0" text="Reporte" />
+      <Button fx:id="btnEditar" layoutX="269.0" layoutY="433.0" mnemonicParsing="false" onAction="#editar" prefHeight="43.0" prefWidth="77.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="177.0" layoutY="433.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="43.0" prefWidth="77.0" text="Eliminar" />
+      <Button fx:id="btnNuevo" layoutX="80.0" layoutY="433.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="43.0" prefWidth="77.0" text="Nuevo" />
+      <ImageView fitHeight="60.0" fitWidth="57.0" layoutX="12.0" layoutY="5.0" onMouseClicked="#medicos" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow height="7.66" radius="9.629999999999999" width="32.86" />
+         </effect>
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

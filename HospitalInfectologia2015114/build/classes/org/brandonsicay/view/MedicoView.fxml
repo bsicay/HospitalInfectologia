@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="539.0" prefWidth="718.0" styleClass="Anchor-Pane" stylesheets="@../resource/fondo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.brandonsicay.controller.MedicoController">
+   <children>
+      <Label layoutX="318.0" layoutY="14.0" prefHeight="48.0" prefWidth="131.0" styleClass="label-header" text="Medicos">
+         <font>
+            <Font name="MS Reference Sans Serif" size="22.0" />
+         </font>
+         <effect>
+            <DropShadow height="32.86" radius="13.705" width="23.96" />
+         </effect>
+      </Label>
+      <GridPane layoutX="48.0" layoutY="80.0" prefHeight="100.0" prefWidth="644.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="10.0" prefWidth="131.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="513.0" minWidth="10.0" prefWidth="513.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="30.0" prefWidth="133.0" styleClass="label-bright" text="Lincencia Medica">
+               <effect>
+                  <InnerShadow color="#1b1a1a">
+                     <input>
+                        <DropShadow color="#ffe0e0" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtLicenciaMedica" editable="false" onKeyTyped="#soloNumerosEnteros" prefHeight="25.0" prefWidth="309.0" GridPane.columnIndex="1">
+               <effect>
+                  <InnerShadow color="#102eb2">
+                     <input>
+                        <InnerShadow color="#073251">
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </InnerShadow>
+                     </input>
+                  </InnerShadow>
+               </effect>
+            </TextField>
+            <Label prefHeight="30.0" prefWidth="133.0" styleClass="label-bright" text="Nombres" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow color="#1b1a1a">
+                     <input>
+                        <DropShadow color="#ffe0e0" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="133.0" styleClass="label-bright" text="Apellidos" GridPane.rowIndex="2">
+               <effect>
+                  <InnerShadow color="#1b1a1a">
+                     <input>
+                        <DropShadow color="#ffe0e0" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombres" editable="false" onKeyTyped="#soloLetras" prefHeight="25.0" prefWidth="309.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow color="#102eb2">
+                     <input>
+                        <InnerShadow color="#073251">
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </InnerShadow>
+                     </input>
+                  </InnerShadow>
+               </effect>
+            </TextField>
+            <TextField fx:id="txtApellidos" editable="false" onKeyTyped="#soloLetras" prefHeight="25.0" prefWidth="309.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <effect>
+                  <InnerShadow color="#102eb2">
+                     <input>
+                        <InnerShadow color="#073251">
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </InnerShadow>
+                     </input>
+                  </InnerShadow>
+               </effect>
+            </TextField>
+         </children>
+      </GridPane>
+      <TableView fx:id="tblMedicos" layoutX="25.0" layoutY="270.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="200.0" prefWidth="662.0" stylesheets="@../resource/fondo.css">
+        <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="56.0" text="Codigo" />
+          <TableColumn fx:id="colLicenciaMedica" prefWidth="128.0" text="Licencia Medica" />
+          <TableColumn fx:id="colNombres" prefWidth="107.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="96.0" text="Apellidos" />
+            <TableColumn fx:id="colEntrada" prefWidth="71.0" text="Entrada" />
+            <TableColumn fx:id="colSalida" prefWidth="57.0" text="Salida" />
+            <TableColumn fx:id="colTurno" prefWidth="109.0" text="Turno Maximo" />
+            <TableColumn fx:id="colSexo" prefWidth="99.0" text="Sexo" />
+        </columns>
+         <effect>
+            <InnerShadow color="#07327c">
+               <input>
+                  <DropShadow />
+               </input></InnerShadow>
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="64.0" layoutY="482.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="43.0" prefWidth="77.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="161.0" layoutY="482.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="43.0" prefWidth="77.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="253.0" layoutY="482.0" mnemonicParsing="false" onAction="#editar" prefHeight="43.0" prefWidth="77.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="345.0" layoutY="482.0" mnemonicParsing="false" onAction="#reporte" prefHeight="43.0" prefWidth="77.0" text="Reporte" />
+      <Label layoutX="47.0" layoutY="184.0" prefHeight="30.0" prefWidth="133.0" styleClass="label-bright" text="Hora de Entrada">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="289.0" layoutY="184.0" prefHeight="30.0" prefWidth="133.0" styleClass="label-bright" text="Hora de Salida">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="509.0" layoutY="184.0" prefHeight="30.0" prefWidth="133.0" styleClass="label-bright" text="Turno Maximo">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="229.0" prefHeight="30.0" prefWidth="48.0" styleClass="label-bright" text="Sexo">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSexo" editable="false" layoutX="313.0" layoutY="228.0" onKeyTyped="#soloLetras" prefHeight="31.0" prefWidth="163.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="txtTurno" editable="false" layoutX="619.0" layoutY="184.0" prefHeight="31.0" prefWidth="71.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="txtHoraSalida" editable="false" layoutX="402.0" layoutY="184.0" onKeyTyped="#horaSalida" prefHeight="31.0" prefWidth="99.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <TextField fx:id="txtHoraEntrada" editable="false" layoutX="181.0" layoutY="184.0" onKeyTyped="#horaEntrada" prefHeight="31.0" prefWidth="99.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <ImageView fitHeight="59.0" fitWidth="56.0" layoutX="24.0" layoutY="10.0" onMouseClicked="#Modulos" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+         <effect>
+            <DropShadow height="7.66" radius="9.629999999999999" width="32.86" />
+         </effect>
+      </ImageView>
+      <Button fx:id="btnNuevo1" layoutX="554.0" layoutY="17.0" mnemonicParsing="false" onAction="#telefonoMedicos" prefHeight="43.0" prefWidth="131.0" text="Telefono Medico" />
+      <Button fx:id="btnNuevo11" layoutX="122.0" layoutY="23.0" mnemonicParsing="false" onAction="#horarios" prefHeight="43.0" prefWidth="131.0" text="Horarios" />
+   </children>
+   <effect>
+      <InnerShadow color="#1733eb" />
+   </effect>
+</AnchorPane>

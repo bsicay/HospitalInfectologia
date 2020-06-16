@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="760.0" styleClass="Anchor-Pane" stylesheets="@../resource/FondoPrincipal.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.brandonsicay.controller.LoginController">
+   <children>
+      <ImageView fitHeight="302.0" fitWidth="301.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Logo2.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogin" layoutX="466.0" layoutY="325.0" mnemonicParsing="false" onAction="#inicioSesion" prefHeight="42.0" prefWidth="78.0" stylesheets="@../resource/FondoPrincipal.css" text="LOGIN" />
+      <Button fx:id="btnRegister" layoutX="369.0" layoutY="378.0" mnemonicParsing="false" onAction="#register" prefHeight="42.0" prefWidth="78.0" stylesheets="@../resource/FondoPrincipal.css" text="REGISTER" />
+      <Button fx:id="btnCancel" layoutX="465.0" layoutY="378.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="42.0" prefWidth="78.0" stylesheets="@../resource/FondoPrincipal.css" text="CANCEL" />
+      <Button fx:id="btnReporte" layoutX="568.0" layoutY="378.0" mnemonicParsing="false" onAction="#report" prefHeight="42.0" prefWidth="78.0" stylesheets="@../resource/FondoPrincipal.css" text="REPORTE" />
+      <Label layoutX="380.0" layoutY="160.0" prefHeight="30.0" prefWidth="101.0" text="USUARIO" />
+      <Label layoutX="380.0" layoutY="216.0" text="CONTRASEÑA" />
+      <TextField fx:id="txtUsuario" layoutX="518.0" layoutY="160.0" prefHeight="25.0" prefWidth="163.0" promptText="USUARIO" />
+      <ComboBox fx:id="cmbTipoDeUsuario" layoutX="421.0" layoutY="280.0" prefHeight="25.0" prefWidth="295.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="297.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/Línea%201.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="42.0" fitWidth="36.0" layoutX="333.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/password.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="pswPassword" layoutX="518.0" layoutY="215.0" prefHeight="25.0" prefWidth="163.0" />
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="336.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/sdaf.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="100.0" fitWidth="101.0" layoutX="481.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/png/login3.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

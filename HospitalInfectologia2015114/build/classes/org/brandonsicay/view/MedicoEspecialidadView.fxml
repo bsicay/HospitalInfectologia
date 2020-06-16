@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="799.0" styleClass="Anchor-Pane" stylesheets="@../resource/fondo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.brandonsicay.controller.MedicoEspecialidadController">
+   <children>
+      <Label layoutX="236.0" layoutY="23.0" prefHeight="48.0" prefWidth="318.0" styleClass="label-header" text="Medico Especialidad">
+         <font>
+            <Font name="MS Reference Sans Serif" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblMedicosEspecialidad" layoutX="59.0" layoutY="238.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="200.0" prefWidth="697.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="125.0" text="Codigo" />
+            <TableColumn fx:id="colMedico" minWidth="0.0" prefWidth="161.0" text="Codigo Medico" />
+            <TableColumn fx:id="colEspecialidad" prefWidth="182.0" text="Codigo Especialidad" />
+            <TableColumn fx:id="colHorario" prefWidth="227.0" text="Codigo Horario" />
+         </columns>
+         <effect>
+            <InnerShadow color="#07327c">
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+      </TableView>
+      <Label layoutX="60.0" layoutY="98.0" prefHeight="30.0" prefWidth="153.0" styleClass="label-bright" text="Codigo Medico">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnNuevo" layoutX="98.0" layoutY="473.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="43.0" prefWidth="77.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="208.0" layoutY="473.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="43.0" prefWidth="77.0" text="Eliminar" />
+      <ImageView fitHeight="67.0" fitWidth="65.0" layoutX="25.0" layoutY="14.0" onMouseClicked="#modulos" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow height="7.66" radius="9.629999999999999" width="32.86" />
+         </effect>
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCodigoMedico" layoutX="196.0" layoutY="98.0" prefHeight="31.0" prefWidth="178.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251" />
+               </input>
+            </InnerShadow>
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="cmbCodigoEspecialidad" layoutX="572.0" layoutY="98.0" prefHeight="31.0" prefWidth="178.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251" />
+               </input>
+            </InnerShadow>
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="cmbCodigoHorario" layoutX="349.0" layoutY="181.0" prefHeight="31.0" prefWidth="216.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251" />
+               </input>
+            </InnerShadow>
+         </effect>
+      </ComboBox>
+      <Label layoutX="397.0" layoutY="98.0" prefHeight="30.0" prefWidth="153.0" styleClass="label-bright" text="Codigo Especialidad">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="160.0" layoutY="182.0" prefHeight="30.0" prefWidth="153.0" styleClass="label-bright" text="Codigo Horario">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

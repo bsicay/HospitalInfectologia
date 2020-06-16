@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="788.0" styleClass="Anchor-Pane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.brandonsicay.controller.ContactoUrgenciaController">
+   <children>
+      <Label layoutX="267.0" layoutY="20.0" prefHeight="48.0" prefWidth="282.0" styleClass="label-header" text="Contacto Urgencia">
+         <font>
+            <Font name="MS Reference Sans Serif" size="22.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="58.0" layoutY="90.0" prefHeight="159.0" prefWidth="676.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="133.0" styleClass="label-bright" text="Apellidos">
+               <effect>
+                  <InnerShadow color="#1b1a1a">
+                     <input>
+                        <DropShadow color="#ffe0e0" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtApellidos" editable="false" onKeyTyped="#soloLetras" prefHeight="25.0" prefWidth="309.0" GridPane.columnIndex="1">
+               <effect>
+                  <InnerShadow color="#102eb2">
+                     <input>
+                        <InnerShadow color="#073251">
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </InnerShadow>
+                     </input>
+                  </InnerShadow>
+               </effect>
+            </TextField>
+            <Label prefHeight="30.0" prefWidth="133.0" styleClass="label-bright" text="Nombres" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow color="#1b1a1a">
+                     <input>
+                        <DropShadow color="#ffe0e0" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombres" editable="false" onKeyTyped="#soloLetras" prefHeight="25.0" prefWidth="309.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow color="#102eb2">
+                     <input>
+                        <InnerShadow color="#073251">
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </InnerShadow>
+                     </input>
+                  </InnerShadow>
+               </effect>
+            </TextField>
+            <Label prefHeight="30.0" prefWidth="133.0" styleClass="label-bright" text="Numero Contacto" GridPane.rowIndex="2">
+               <effect>
+                  <InnerShadow color="#1b1a1a">
+                     <input>
+                        <DropShadow color="#ffe0e0" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNumeroContacto" editable="false" onKeyTyped="#telefono" prefHeight="25.0" prefWidth="309.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <effect>
+                  <InnerShadow color="#102eb2">
+                     <input>
+                        <InnerShadow color="#073251">
+                           <input>
+                              <InnerShadow />
+                           </input>
+                        </InnerShadow>
+                     </input>
+                  </InnerShadow>
+               </effect>
+            </TextField>
+            <Label fx:id="txtCodigoPaciente" prefHeight="30.0" prefWidth="133.0" styleClass="label-bright" text="Codigo Paciente" GridPane.rowIndex="3">
+               <effect>
+                  <InnerShadow color="#1b1a1a">
+                     <input>
+                        <DropShadow color="#ffe0e0" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbCodigoPaciente" prefHeight="31.0" prefWidth="512.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <effect>
+                  <InnerShadow color="#102eb2">
+                     <input>
+                        <InnerShadow color="#073251" />
+                     </input>
+                  </InnerShadow>
+               </effect>
+            </ComboBox>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="284.0" minWidth="10.0" prefWidth="131.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="513.0" minWidth="10.0" prefWidth="513.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="96.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="0.0" prefHeight="47.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="97.0" minHeight="0.0" prefHeight="18.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <TableView fx:id="tblContactosUrgencia" layoutX="58.0" layoutY="249.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="200.0" prefWidth="676.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="77.0" text="Codigo" />
+            <TableColumn fx:id="colApellidos" prefWidth="102.0" text="Apellidos" />
+            <TableColumn fx:id="colNombres" prefWidth="157.0" text="Nombres" />
+            <TableColumn fx:id="colNumeroContacto" prefWidth="200.0" text="Numero Contacto" />
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="316.0" text="Codigo Paciente" />
+         </columns>
+         <effect>
+            <InnerShadow color="#07327c">
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+      </TableView>
+      <Button fx:id="btnReporte" layoutX="353.0" layoutY="463.0" mnemonicParsing="false" onAction="#reporte" prefHeight="43.0" prefWidth="77.0" text="Reporte" />
+      <Button fx:id="btnEditar" layoutX="261.0" layoutY="463.0" mnemonicParsing="false" onAction="#editar" prefHeight="43.0" prefWidth="77.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="169.0" layoutY="463.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="43.0" prefWidth="77.0" text="Eliminar" />
+      <Button fx:id="btnNuevo" layoutX="72.0" layoutY="463.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="43.0" prefWidth="77.0" text="Nuevo" />
+      <ImageView fitHeight="67.0" fitWidth="65.0" layoutX="25.0" layoutY="14.0" onMouseClicked="#pacientes" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow height="7.66" radius="9.629999999999999" width="32.86" />
+         </effect>
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+   </children>
+   <stylesheets>
+      <URL value="@../resource/fondo.css" />
+      <URL value="@../resource/FondoPrincipal.css" />
+   </stylesheets>
+</AnchorPane>

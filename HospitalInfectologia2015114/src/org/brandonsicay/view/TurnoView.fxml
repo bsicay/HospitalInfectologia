@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="886.0" styleClass="Anchor-Pane" stylesheets="@../resource/fondo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.brandonsicay.controller.TurnoController">
+   <children>
+      <Label layoutX="400.0" layoutY="10.0" prefHeight="48.0" prefWidth="110.0" styleClass="label-header" text="Turnos">
+         <font>
+            <Font name="MS Reference Sans Serif" size="22.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblTurnos" layoutX="53.0" layoutY="333.0" prefHeight="200.0" prefWidth="804.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="79.0" text="Codigo" />
+            <TableColumn fx:id="colFechaTurno" prefWidth="126.0" text="Fecha Turno" />
+            <TableColumn fx:id="colFechaCita" prefWidth="131.0" text="Fecha Cita" />
+            <TableColumn fx:id="colValorCita" prefWidth="109.0" text="Valor Cita" />
+            <TableColumn fx:id="colCodigoMedicoEspecialidad" prefWidth="164.0" text="Medico Especialidad" />
+            <TableColumn fx:id="colCodigoTurnoResponsable" prefWidth="97.0" text="Turno Responsable" />
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="97.0" text="Paciente" />
+         </columns>
+         <effect>
+            <InnerShadow color="#07327c">
+               <input>
+                  <DropShadow />
+               </input>
+            </InnerShadow>
+         </effect>
+      </TableView>
+      <Button fx:id="btnReporte" layoutX="330.0" layoutY="555.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="77.0" text="Reporte" />
+      <Button fx:id="btnEditar" layoutX="238.0" layoutY="555.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="77.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="146.0" layoutY="555.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="77.0" text="Eliminar" />
+      <Button fx:id="btnNuevo" layoutX="49.0" layoutY="555.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="77.0" text="Nuevo" />
+      <TextField fx:id="txtValorCita" editable="false" layoutX="175.0" layoutY="178.0" prefHeight="31.0" prefWidth="126.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251">
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </InnerShadow>
+               </input>
+            </InnerShadow>
+         </effect>
+      </TextField>
+      <Label layoutX="80.0" layoutY="179.0" prefHeight="30.0" prefWidth="77.0" styleClass="label-bright" text="Valor Cita">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="364.0" layoutY="179.0" prefHeight="30.0" prefWidth="147.0" styleClass="label-bright" text="Medico Especialidad">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="56.0" fitWidth="55.0" layoutX="14.0" layoutY="6.0" onMouseClicked="#modulos" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow height="7.66" radius="9.629999999999999" width="32.86" />
+         </effect>
+         <image>
+            <Image url="@../images/regresar.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="413.0" layoutY="108.0" prefHeight="30.0" prefWidth="84.0" styleClass="label-bright" text="Fecha Cita">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="grpFechaTurno" layoutX="173.0" layoutY="107.0" prefHeight="31.0" prefWidth="207.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label layoutX="69.0" layoutY="109.0" prefHeight="30.0" prefWidth="98.0" styleClass="label-bright" text="Fecha Turno">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="grpFechaCita" layoutX="512.0" layoutY="108.0" prefHeight="31.0" prefWidth="207.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <ComboBox fx:id="cmbCodigoMedicoEspecialidad" layoutX="538.0" layoutY="178.0" prefHeight="31.0" prefWidth="216.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251" />
+               </input>
+            </InnerShadow>
+         </effect>
+      </ComboBox>
+      <Label layoutX="73.0" layoutY="256.0" prefHeight="30.0" prefWidth="147.0" styleClass="label-bright" text="Turno Responsable">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoTurnoReponsable" layoutX="238.0" layoutY="256.0" prefHeight="31.0" prefWidth="216.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251" />
+               </input>
+            </InnerShadow>
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="cmbCodigoPaciente" layoutX="595.0" layoutY="256.0" prefHeight="31.0" prefWidth="216.0">
+         <effect>
+            <InnerShadow color="#102eb2">
+               <input>
+                  <InnerShadow color="#073251" />
+               </input>
+            </InnerShadow>
+         </effect>
+      </ComboBox>
+      <Label layoutX="511.0" layoutY="256.0" prefHeight="30.0" prefWidth="84.0" styleClass="label-bright" text="Paciente">
+         <effect>
+            <InnerShadow color="#1b1a1a">
+               <input>
+                  <DropShadow color="#ffe0e0" />
+               </input>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
